@@ -1,0 +1,281 @@
+tables:
+  - name: DR
+    page: 4
+    flavor: Stream
+    area_tlbr: [101.0, 25.0, 756.0, 452.0]
+    columns: [50.0, 292.0, 331.0]
+    min_rows: 3
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 20
+    column_tol: 2
+
+  - name: BL
+    find_page_by:
+      all_of:
+        - "04-A"
+        - "balanço"
+        - "2010 e seguintes"
+    flavor: stream
+    area_tlbr: [55.333, 27.333, 827.333, 457.333]
+    columns: [50.667, 343.333]
+    min_rows: 3
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 9
+    column_tol: 3
+
+  - name: AI
+    find_page_by:
+      all_of:
+        - "05071-A"
+        - "ativos intangíveis"
+        - "programas de computador"
+    flavor: stream
+    area_tlbr: [95.0, 61.5, 810, 810]
+    columns: [256, 279.5, 411, 543.5, 676.5]
+    min_rows: 1
+    min_cols: 6
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 2
+    concat_tables: true
+
+  - name: AI1
+    find_page_by:
+      all_of:
+        - "05071-A"
+        - "outros ativos intangíveis"
+        - "ativos intangíveis em curso"
+    flavor: stream
+    area_tlbr: [62.4, 27.2, 811, 811.2]
+    columns: [61.6, 255.3, 277.6, 410.4, 543.2, 676.0]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: AFT
+    find_page_by:
+      all_of:
+        - "05081-A"
+        - "activos fixos tangíveis"
+        - "aft"
+    flavor: stream
+    area_tlbr: [69.143, 25.143, 809, 809.143]
+    columns: [253.143, 277.143, 387.0, 489.714, 595.429, 702.286]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: AFT1
+    find_page_by:
+      all_of:
+        - "05081-A"
+        - "aft"
+        - "equipamentos biológicos"
+    flavor: stream
+    area_tlbr: [69.714, 24.571, 812, 812.571]
+    columns: [341.714, 365.714, 454.286, 542.857, 631.429, 720]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: CMVMC
+    find_page_by:
+      all_of:
+        - "05191-A"
+        - "mercadorias vendidas"
+        - "matérias consumidas"
+    flavor: stream
+    area_tlbr: [60, 60, 560, 811.5]
+    columns: [471, 495, 599, 706]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: VP
+    find_page_by:
+      all_of:
+        - "05192-A"
+        - "variação nos inventários da produção"
+    flavor: stream
+    area_tlbr: [580, 60, 811.5, 811.5]
+    columns: [238, 384, 490, 610, 720]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: Pessoal
+    find_page_by:
+      all_of:
+        - "05291-A"
+        - "pessoas ao serviço"
+        - "horas trabalhadas"
+    flavor: stream
+    area_tlbr: [214.0, 41, 404.5, 499.5]
+    columns: [410, 432.5]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: GP
+    find_page_by:
+      all_of:
+        - "05292-A"
+        - "gastos com o pessoal"
+    flavor: stream
+    area_tlbr: [421.33, 39.33, 730, 568]
+    columns: [410, 433.33]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: AtivEco
+    find_page_by:
+      all_of:
+        - "05301-A"
+        - "actividades económicas"
+    flavor: stream
+    area_tlbr: [68.67, 64, 813, 813.333]
+    columns: [316.667, 340, 458, 576, 692.667]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 15
+    column_tol: 3
+
+  - name: MercGeo
+    find_page_by:
+      all_of:
+        - "05302-A"
+        - "mercados geográficos"
+    flavor: stream
+    area_tlbr: [69.333, 65.333, 540, 812.667]
+    columns: [316.667, 337.33, 458, 576, 694]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: FSE
+    find_page_by:
+      all_of:
+        - "contas de gastos"
+        - "fornecimentos e serviços externos"
+        - "subcontratos"
+    flavor: stream
+    area_tlbr: [375, 109.333, 814, 562.667]
+    columns: [454.667, 480]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 12
+    column_tol: 3
+
+  - name: FSE1
+    find_page_by:
+      all_of:
+        - "contas de gastos"
+        - "taxas"
+        - "juros suportados"
+    flavor: stream
+    area_tlbr: [60, 108.67, 288.67, 562]
+    columns: [455.33, 478.66]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 12
+    column_tol: 3
+
+  - name: ImpInd
+    find_page_by:
+      all_of:
+        - "contas de gastos"
+        - "impostos indiretos"
+        - "serviços diversos"
+    flavor: stream
+    area_tlbr: [60, 108.67, 520, 562]
+    columns: [455.33, 478.66]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 12
+    column_tol: 3
+
+  - name: RendSup
+    find_page_by:
+      all_of:
+        - "contas de rendimentos"
+        - "rendimentos suplementares"
+        - "outros rendimentos e ganhos"
+    flavor: stream
+    area_tlbr: [60, 108.67, 760, 562]
+    columns: [455.33, 478.66]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 12
+    column_tol: 3
+
+  - name: PI
+    find_page_by:
+      all_of:
+        - "05121-A"
+        - "propriedades de investimento"
+        - "modelo do justo valor"
+    flavor: stream
+    area_tlbr: [72, 59.5, 808, 808.5]
+    columns: [253, 275.5, 382.5, 489.5, 595.0, 700.5]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
+
+  - name: PI1
+    find_page_by:
+      all_of:
+        - "05121-A"
+        - "propriedades de investimento"
+        - "modelo do custo"
+    flavor: stream
+    area_tlbr: [72, 59.5, 808, 808.5]
+    columns: [253, 275.5, 382.5, 489.5, 595.0, 700.5]
+    min_rows: 1
+    min_cols: 3
+    excel_number_format: "0.00"
+    numeric_cols: "all"
+    row_tol: 10
+    column_tol: 3
