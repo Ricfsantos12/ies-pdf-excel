@@ -5,3 +5,4 @@ openpyxl
 pypdf
 camelot-py[cv]
 opencv-python-headless
+pikepdf
