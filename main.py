@@ -1,10 +1,7 @@
 import tempfile
 from pathlib import Path
 
-import pikepdf
 import streamlit as st
-
-from pdf_para_excel_template import main as converter_pdf_excel
 
 
 # Pasta onde estão main.py e template.yml
@@ -75,6 +72,9 @@ if uploaded_file is not None:
 
         try:
             with st.spinner("A preparar e converter o documento..."):
+                import pikepdf
+                from pdf_para_excel_template import main as converter_pdf_excel
+
                 with tempfile.TemporaryDirectory() as temporary_directory:
                     temporary_path = Path(temporary_directory)
 
